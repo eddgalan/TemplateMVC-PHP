@@ -8,6 +8,7 @@
     function __construct(){
       /* ...:: Views :::.. */
       $rutas["login"]="login";
+      $rutas["dashboard"]="dashboard";
 
       /* ...:: APIs ::... */
       /* PEDIDOS */
@@ -69,7 +70,7 @@
         }
         // write_log(serialize($valida));
       } else {
-        header("Location: /PriceShop/login");
+        $controller = new Inicio();
       }
 
     }

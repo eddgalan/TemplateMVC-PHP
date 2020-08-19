@@ -8,15 +8,15 @@
     Protected $conn;
 
     /* ...:: MÉTODOS ::... */
+    // Constructor 
     function __construct() {
-      $this->servername = "";
-      $this->username = "";
-      $this->password = "";
-      $this->sqldatabase = "";
+      $this->servername = "";   // Colocar aquí el nombre del servidor
+      $this->username = "";     // Colocar aquí el nombre del usuario (De la base de datos)
+      $this->password = "";     // Colocar aquí la contraseña del usuario (De la base de datos)
+      $this->sqldatabase = "";  // Nombre de la base de datos
     }
-    //Conectar a la BD
+    // Conectar a la BD
     function conectar() {
-      //Conectamos a la BD
       $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->sqldatabase);
       // Check connection
       if ($this->conn->connect_error) {
@@ -24,8 +24,7 @@
         die("Connection failed: " . $this->conn->connect_error);
       }
     }
-
-    //Desconectar de la BD
+    // Desconectar de la BD
     function desconectar(){
       $this->conn->close();
     }
