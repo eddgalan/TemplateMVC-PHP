@@ -17,7 +17,7 @@
             $usuario->set_datos_usuario( $sesion_usuario->get_datos_sesion() );
 
             if ($nombre == 'views/modules/login.php'){
-              header('location: /dashboard');
+              header('location: /home');   //Si ya hay una sesión y se intenta ir al login a qué página redirecciona?
             }else{
               include_once $nombre;   // Aquí es donde se carga la vista de la página
             }
@@ -39,7 +39,7 @@
           // Colocamos la sesión actual del usuario
           $sesion_usuario->set_sesion_actual($usuario->get_datos_usuario());
           // Redireccionamos a la página 'principal'
-          header('location: /dashboard');
+          header('location: /dashboard');           // Página a la que deseamos redirigir si el login fue exitoso
         }else{
           // Ponemos el mensaje de error
           $errorLogin = 'Usuario y/o contraseña incorrecta.';

@@ -11,5 +11,8 @@
 </div>
 
 <?php
-
+  // include  "views/modules/plantilla.footer.php"; //Aquí se puede cargar el footer
 ?>
+
+</body>
+</html>
