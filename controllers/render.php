@@ -1,33 +1,26 @@
 <?php
-  require_once 'libs/log.php';
-//  require_once 'models/usuario.php';
+  // require_once 'models/usuario.php';
+  // require_once 'models/cliente.php';
 
-  class Inicio {
+  class Pruebas{
     function __construct(){
-      $data['titulo'] = 'Página de Inicio';
-      $this->view = new View();
-      $this->view->render('views/modules/inicio.php', $data);
-    }
-  }
-
-  class Dashboard {
-    function __construct(){
-      $data['titulo'] = 'Página de Inicio';
-      $this->view = new View();
-      $this->view->render('views/modules/dashboard.php', $data, true);
+        $clientes = new Cliente();
+        var_dump($clientes -> get_activos());
     }
   }
 
   class Login {
-    function __construct(){
-      $data['titulo'] = 'PriceShop - Inicio de sesión';
+    function __construct($host_name="", $site_name="", $variables=null){
+      $data['titulo'] = $host_name;
+      $data['host'] = $host_name;
+      $data['sitio'] = $site_name;
       $this->view = new View();
       $this->view->render('views/modules/login.php', $data);
     }
   }
 
   class Logout {
-    function __construct(){
+    function __construct($host_name="", $site_name="", $variables=null){
       $vista = new View();
       $vista->render('views/modules/logout.php');
     }
@@ -37,7 +30,15 @@
     function __construct(){
       $data['titulo'] = 'PriceShop - Error';
       $vista = new View();
-      $vista->render('views/modules/error.php', $data);
+      $vista->render('views/modules/error.php');
+    }
+  }
+
+  class Dashboard {
+    function __construct($host_name="", $site_name="", $variables=null){
+      $data['titulo'] = 'PriceShop - Error';
+      $vista = new View();
+      $vista->render('views/modules/error.php', null, true);
     }
   }
 

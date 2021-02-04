@@ -1,7 +1,6 @@
 <?php
 // Método que escribe en el archivo txt
 function write_log($data_string){
-
   $nombre_archivo = date("Y-m-d"). ".log";
   $file_log = fopen('logs/'. $nombre_archivo,'a');
   fwrite($file_log, "===================================================================================================================================================\n");
@@ -10,7 +9,6 @@ function write_log($data_string){
   fwrite($file_log, "Nombre Usuario: \n");
   fwrite($file_log, $data_string . "\n");
   fclose($file_log);
-
 }
 
 function get_idusr(){
@@ -20,6 +18,5 @@ function get_idusr(){
 function get_usrname(){
 
 }
-
 
 ?>

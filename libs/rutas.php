@@ -1,17 +1,16 @@
 <?php
   /* === INCLUDES === */
-  require_once 'controllers/render.php';
-  include_once 'models/usuario.php';
+  require 'controllers/render.php';
 
   /* === Clase Rutas para controlar las URLs === */
   class Rutas{
-    function __construct(){
+    function __construct($host_name, $site_name){
       /* ...:: Views :::.. */
-      $rutas["login"]="login";
-      $rutas["dashboard"]="dashboard";
+      $rutas["login"]="Login";
+      $rutas["logout"]="Logout";
+      $rutas["dashboard"]="Dashboard";
 
       /* ...:: APIs ::... */
-      /* PEDIDOS */
       $rutas["API/pedidos/pedido_nuevo"]="api/PedidoAPI/guardar_nuevo";
 
 
@@ -60,17 +59,18 @@
             // Validamos si hay variables en la URL
             if (count($valida)>1){
               // Creamos un controlador con el nombre de la clase y le mandamos las variables
-              $controller = new $clase_controlador($valida);
+              $controller = new $clase_controlador($host_name, $site_name, $valida);
             } else {
               // Creamos un controlador con el nombre de la clase
-              $controller = new $clase_controlador();
+              $controller = new $clase_controlador($host_name, $site_name);
             }
 
           }
         }
         // write_log(serialize($valida));
       } else {
-        $controller = new Inicio();
+        $redirect_url = $host_name . "login";
+        header("Location: $redirect_url");
       }
 
     }
