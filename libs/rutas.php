@@ -1,6 +1,7 @@
 <?php
   /* === INCLUDES === */
   require 'controllers/render.php';
+  require 'controllers/api.php';
 
   /* === Clase Rutas para controlar las URLs === */
   class Rutas{
@@ -12,6 +13,7 @@
 
       /* ...:: APIs ::... */
       $rutas["API/pedidos/pedido_nuevo"]="api/PedidoAPI/guardar_nuevo";
+      $rutas["API/usuario/get_users"]="api/UsuarioAPI/get_users";
 
 
       //Si no está vacía la variable $_GET['url'] la usamos para navegar
@@ -35,7 +37,6 @@
         } else {
           // Validamos si la URL es para una API
           if( strpos($url, "API") === 0 ){
-            require_once 'controllers/api.php';
             $array_url = $rutas[$valida[0]];
             // Convierte la URL en ARRAY
             $array_url = rtrim($array_url,'/');
