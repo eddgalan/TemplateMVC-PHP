@@ -1,6 +1,5 @@
 <?php
-  // require_once 'models/usuario.php';
-  // require_once 'models/cliente.php';
+  require 'models/usuario.php';
 
   class Pruebas{
     function __construct(){

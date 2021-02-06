@@ -1,5 +1,5 @@
 <?php
-  include_once 'models/usuario.php';
+  require 'models/sesion.php';
 
   class View{
     function render($modulo, $data=null, $require_login=false){

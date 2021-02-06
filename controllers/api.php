@@ -1,8 +1,8 @@
 <?php
 
   class API{
-    private $datos=[];      
-    private $response=[];   
+    private $datos;
+    private $response;
 
     public function return_data($msg, $code, $data=null){
       $this->response['code'] = $code;
@@ -14,13 +14,17 @@
 
   class UsuarioAPI extends API{
     public function get_users(){
-      write_log("API | get_users");
-      $usuario = new Usuario();
-      $usuarios = $usuario-> get_users();
-      if($usuarios){
-        $this -> return_data("Mostrando Usuarios", 200, $usuarios);
+      if($_POST){
+         $this->datos = $_POST['nombre'];
+         $usuario = new Usuario();
+         $usuarios = $usuario-> get_users();
+         if($usuarios){
+           $this -> return_data("Mostrando Usuarios", 200, $usuarios);
+         }else{
+           $this -> return_data("NO se encontraron registros o hubo algún error", 200, $this->datos);
+         }
       }else{
-        $this -> return_data("NO se encontraron registros o hubo algún error", 200);
+        $this->return_data("NO se recibieron datos POST", 200);
       }
     }
   }

@@ -12,7 +12,6 @@
       $rutas["dashboard"]="Dashboard";
 
       /* ...:: APIs ::... */
-      $rutas["API/pedidos/pedido_nuevo"]="api/PedidoAPI/guardar_nuevo";
       $rutas["API/usuario/get_users"]="api/UsuarioAPI/get_users";
 
 
