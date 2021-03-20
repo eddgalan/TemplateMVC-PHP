@@ -1,4 +1,20 @@
 <?php
+  class Connection_PDO{
+    Protected $servername;
+    Protected $username;
+    Protected $password;
+    Protected $sqldatabase;
+    Protected $conn;
+
+    function __construct() {
+      $this->servername = "";   // Colocar aquí el nombre del servidor
+      $this->username = "";     // Colocar aquí el nombre del usuario (De la base de datos)
+      $this->password = "";     // Colocar aquí la contraseña del usuario (De la base de datos)
+      $this->sqldatabase = "";  // Nombre de la base de datos
+    }
+  }
+
+
   class MySQL_Object{
     /* ...:: PROPIEDADES ::... */
     Protected $servername;
@@ -8,7 +24,7 @@
     Protected $conn;
 
     /* ...:: MÉTODOS ::... */
-    // Constructor 
+    // Constructor
     function __construct() {
       $this->servername = "";   // Colocar aquí el nombre del servidor
       $this->username = "";     // Colocar aquí el nombre del usuario (De la base de datos)

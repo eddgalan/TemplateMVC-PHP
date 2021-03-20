@@ -4,7 +4,7 @@
   class View{
     function render($modulo, $data=null, $require_login=false){
       // Creamos una instancia de UsrSession | usuario.php
-      $sesion_usuario = new UsrSession();
+      $sesion_usuario = new Session();
       // Generamos una intancia Usuario | usuario.php
       $usuario = new Usuario();
       // Valida si se requiere estar logueado para mostrar la página
