@@ -1,15 +1,15 @@
 <?php
-  /* === INCLUDES === */
   require 'controllers/render.php';
   require 'controllers/api.php';
 
-  /* === Clase Rutas para controlar las URLs === */
-  class Rutas{
+  class Routes{
     function __construct($host_name, $site_name){
       /* ...:: Views :::.. */
-      $routes["login"]="Login";
-      $routes["logout"]="Logout";
       $routes["dashboard"]="Dashboard";
+      $routes["login"]="Login";
+      $routes["profile"]="Profile";
+      $routes["register"]="Register";
+      $routes["table"]="Table";
 
       /* ...:: APIs ::... */
       $routes["API/usuario/get_users"]="api/UsuarioAPI/get_users";
@@ -69,7 +69,7 @@
         }
         // write_log(serialize($valida));
       } else {
-        $redirect_url = $host_name . "login";
+        $redirect_url = $host_name . "/dashboard";
         header("Location: $redirect_url");
       }
 

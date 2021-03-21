@@ -4,8 +4,8 @@
   require 'libs/view.php';
   include 'libs/log.php';
 
-  $host_name = "http://localhost/subdominio/";
+  $host_name = "http://localhost/TemplateMVC-PHP";
   $site_name = "My Web Site";
 
-  $app = new Rutas($host_name, $site_name);
+  $app = new Routes($host_name, $site_name);
 ?>
