@@ -1,6 +1,6 @@
 <?php
   /* ..:: Imports Principales ::.. */
-  require 'controllers/rutas.php';
+  require 'controllers/routes.php';
   require 'libs/view.php';
   include 'libs/log.php';
 
