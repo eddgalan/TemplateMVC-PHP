@@ -7,12 +7,12 @@
   class Rutas{
     function __construct($host_name, $site_name){
       /* ...:: Views :::.. */
-      $rutas["login"]="Login";
-      $rutas["logout"]="Logout";
-      $rutas["dashboard"]="Dashboard";
+      $routes["login"]="Login";
+      $routes["logout"]="Logout";
+      $routes["dashboard"]="Dashboard";
 
       /* ...:: APIs ::... */
-      $rutas["API/usuario/get_users"]="api/UsuarioAPI/get_users";
+      $routes["API/usuario/get_users"]="api/UsuarioAPI/get_users";
 
 
       //Si no está vacía la variable $_GET['url'] la usamos para navegar
@@ -22,9 +22,9 @@
         $array_rutas=[];
 
         // Pasamos los índices a array_rutas
-        while (current($rutas)) {
-          array_push($array_rutas, key($rutas));
-          next($rutas);
+        while (current($routes)) {
+          array_push($array_rutas, key($routes));
+          next($routes);
         }
 
         // Llamamos a la función 'url_valida' que retorna si la URL es válida
@@ -36,7 +36,7 @@
         } else {
           // Validamos si la URL es para una API
           if( strpos($url, "API") === 0 ){
-            $array_url = $rutas[$valida[0]];
+            $array_url = $routes[$valida[0]];
             // Convierte la URL en ARRAY
             $array_url = rtrim($array_url,'/');
             $array_url = explode('/',$array_url);
@@ -55,7 +55,7 @@
 
           } else {
             // Asignamos el nombre del archivo del controlador
-            $clase_controlador = $rutas[$valida[0]];
+            $clase_controlador = $routes[$valida[0]];
             // Validamos si hay variables en la URL
             if (count($valida)>1){
               // Creamos un controlador con el nombre de la clase y le mandamos las variables
@@ -86,7 +86,7 @@
     $array_url = explode('/',$array_url);
 
     for ($i=0;$i<count($array_rutas);$i++){
-      $data[0] = $array_rutas[$i];    //Guarda la dirección de la ruta de $rutas[]
+      $data[0] = $array_rutas[$i];    //Guarda la dirección de la ruta de $routes[]
       $dir_ruta = $array_rutas[$i];
       $dir_ruta = rtrim($dir_ruta,'/');
       $dir_ruta = explode('/',$dir_ruta);
