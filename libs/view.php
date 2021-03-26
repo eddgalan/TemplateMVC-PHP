@@ -23,7 +23,7 @@
 
           }else{
             write_log("No hay sesión - Redirigiendo a login");
-            header("location: " . $data['host'] . "login");     // Poner a qué dirección se desea redirigir si no hay sesión
+            header("location: ./login");     // Poner a qué dirección se desea redirigir si no hay sesión
           }
       }else if(isset($_POST['usr_name']) && isset($_POST['usr_pass'])){
         write_log("Haciendo POST en LOGIN");
@@ -36,7 +36,7 @@
           // Colocamos la sesión actual del usuario
           $sesion_usuario->set_sesion_actual($usuario->get_datos_usuario());
           // Redireccionamos a la página 'principal' si el Login fue exitoso
-          header("location:" . $data['host'] . "dashboard");
+          header("location: ./dashboard");
         }else{
           // Ponemos el mensaje de error
           $errorLogin = 'Usuario y/o contraseña incorrecta.';
