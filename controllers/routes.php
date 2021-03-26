@@ -10,7 +10,8 @@
       $routes["profile"]="Profile";
       $routes["register"]="Register";
       $routes["table"]="Table";
-
+      $routes["clientes"]="Clientes";
+      
       /* ...:: APIs ::... */
       $routes["API/usuario/get_users"]="api/UsuarioAPI/get_users";
 
