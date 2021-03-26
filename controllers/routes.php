@@ -69,7 +69,7 @@
         }
         // write_log(serialize($valida));
       } else {
-        $redirect_url = $host_name . "/dashboard";
+        $redirect_url = "/dashboard";
         header("Location: $redirect_url");
       }
 

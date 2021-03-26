@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Profile - Brand</title>
-    <link rel="stylesheet" href="<?= $data['host'] ?>/views/modules/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./views/modules/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="<?= $data['host'] ?>/views/modules/assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="<?= $data['host'] ?>/views/modules/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= $data['host'] ?>/views/modules/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="./views/modules/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./views/modules/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="./views/modules/assets/fonts/fontawesome5-overrides.min.css">
 </head>
 
 <body id="page-top">
@@ -21,11 +21,11 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                  <li class="nav-item"><a class="nav-link" href="<?= $data['host'] ?>/dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                  <li class="nav-item"><a class="nav-link active" href="<?= $data['host'] ?>/profile"><i class="fas fa-user"></i><span>Profile</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?= $data['host'] ?>/table"><i class="fas fa-table"></i><span>Table</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?= $data['host'] ?>/login"><i class="far fa-user-circle"></i><span>Login</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="<?= $data['host'] ?>/register"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                  <li class="nav-item"><a class="nav-link active" href="./profile"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./table"><i class="fas fa-table"></i><span>Table</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./login"><i class="far fa-user-circle"></i><span>Login</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./register"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -81,7 +81,7 @@
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#"><span class="badge badge-danger badge-counter">7</span><i class="fas fa-envelope fa-fw"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-list animated--grow-in">
                                         <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="<?= $data['host'] ?>/views/modules/assets/img/avatars/avatar4.jpeg">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="./views/modules/assets/img/avatars/avatar4.jpeg">
                                                 <div class="bg-success status-indicator"></div>
                                             </div>
                                             <div class="font-weight-bold">
@@ -89,7 +89,7 @@
                                                 <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
                                             </div>
                                         </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="<?= $data['host'] ?>/views/modules/assets/img/avatars/avatar2.jpeg">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="./views/modules/assets/img/avatars/avatar2.jpeg">
                                                 <div class="status-indicator"></div>
                                             </div>
                                             <div class="font-weight-bold">
@@ -97,7 +97,7 @@
                                                 <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
                                             </div>
                                         </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="<?= $data['host'] ?>/views/modules/assets/img/avatars/avatar3.jpeg">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="./views/modules/assets/img/avatars/avatar3.jpeg">
                                                 <div class="bg-warning status-indicator"></div>
                                             </div>
                                             <div class="font-weight-bold">
@@ -105,7 +105,7 @@
                                                 <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
                                             </div>
                                         </a><a class="dropdown-item d-flex align-items-center" href="#">
-                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="<?= $data['host'] ?>/views/modules/assets/img/avatars/avatar5.jpeg">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="./views/modules/assets/img/avatars/avatar5.jpeg">
                                                 <div class="bg-success status-indicator"></div>
                                             </div>
                                             <div class="font-weight-bold">
@@ -119,7 +119,7 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Valerie Luna</span><img class="border rounded-circle img-profile" src="<?= $data['host'] ?>/views/modules/assets/img/avatars/avatar1.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Valerie Luna</span><img class="border rounded-circle img-profile" src="./views/modules/assets/img/avatars/avatar1.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
@@ -133,7 +133,7 @@
                     <div class="row mb-3">
                         <div class="col-lg-4">
                             <div class="card mb-3">
-                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="<?= $data['host'] ?>/views/modules/assets/img/dogs/image2.jpeg" width="160" height="160">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="./views/modules/assets/img/dogs/image2.jpeg" width="160" height="160">
                                     <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Change Photo</button></div>
                                 </div>
                             </div>
@@ -274,12 +274,12 @@
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
-    <script src="<?= $data['host'] ?>/views/modules/assets/js/jquery.min.js"></script>
-    <script src="<?= $data['host'] ?>/views/modules/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?= $data['host'] ?>/views/modules/assets/js/chart.min.js"></script>
-    <script src="<?= $data['host'] ?>/views/modules/assets/js/bs-init.js"></script>
+    <script src="./views/modules/assets/js/jquery.min.js"></script>
+    <script src="./views/modules/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./views/modules/assets/js/chart.min.js"></script>
+    <script src="./views/modules/assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="<?= $data['host'] ?>/views/modules/assets/js/theme.js"></script>
+    <script src="./views/modules/assets/js/theme.js"></script>
 </body>
 
 </html>
