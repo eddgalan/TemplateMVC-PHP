@@ -1,5 +1,6 @@
 <?php
   require 'models/usuario.php';
+  require 'models/cliente.php';
 
   class Dashboard {
     function __construct($host_name="", $site_name="", $variables=null){
@@ -51,13 +52,6 @@
     }
   }
 
-  class Logout {
-    function __construct($host_name="", $site_name="", $variables=null){
-      $vista = new View();
-      $vista->render('views/modules/logout.php');
-    }
-  }
-
   class ErrorURL {
     function __construct(){
       $data['title'] = 'Error 404';
@@ -71,8 +65,19 @@
       $data['host'] = $host_name;
       $data['sitio'] = $site_name;
       $data['title'] = "Listado de clientes";
+
+      $cliente = new ClientePDO();
+      $data['clientes'] = $cliente->get_clientes();
+
       $this->view = new View();
       $this->view->render('views/modules/clientes.php', $data);
+    }
+  }
+
+  class Cliente{
+    function __construct($host_name="", $site_name="", $variables=null){
+      write_log(serialize($variables[1]));
+      echo ($variables[1]);
     }
   }
 

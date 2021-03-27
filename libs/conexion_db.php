@@ -15,19 +15,16 @@
 
     function connect(){
       try {
-        $conn = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->conn = new PDO("mysql:host=$this->servername;dbname=$this->sqldatabase", $this->username, $this->password);
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         write_log("¡Conexión a BD Exitosa!");
       } catch(PDOException $e) {
         write_log("Ocurrió un error al conectar a la BD: \nError: " . $e->getMessage());
-        //echo "Connection failed: " . $e->getMessage();
       }
     }
 
     function disconect(){
       write_log("Desconectado de la BD");
-
     }
   }
 

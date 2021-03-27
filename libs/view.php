@@ -45,8 +45,7 @@
           include_once 'views/modules/login.php';
         }
       }else{
-          write_log("NO requiere login");
-          include_once $modulo;
+          include_once $modulo;   //No requiere Login así que se carga la vista
       }
     }
   }
