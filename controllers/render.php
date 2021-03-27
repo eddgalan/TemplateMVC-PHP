@@ -76,8 +76,15 @@
 
   class Cliente{
     function __construct($host_name="", $site_name="", $variables=null){
-      write_log(serialize($variables[1]));
-      echo ($variables[1]);
+      $data['host'] = $host_name;
+      $data['sitio'] = $host_name;
+      $data['title'] = 'Datos del cliente Cliente' . $variables[1];
+
+      $data['dato_url'] = $variables[1];
+
+      $this->view = new View();
+      $this->view->render('views/modules/cliente.php', $data);
+
     }
   }
 

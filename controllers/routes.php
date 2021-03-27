@@ -11,9 +11,10 @@
       $routes["register"]="Register";
       $routes["table"]="Table";
       $routes["clientes"]="Clientes";
-      
+      $routes["clientes/_data_"]="Cliente";
+
       /* ...:: APIs ::... */
-      $routes["API/usuario/get_users"]="api/UsuarioAPI/get_users";
+      $routes["API/clientes/get_clientes"]="UsuarioAPI/get_users";
 
 
       //Si no está vacía la variable $_GET['url'] la usamos para navegar
@@ -42,8 +43,8 @@
             $array_url = rtrim($array_url,'/');
             $array_url = explode('/',$array_url);
 
-            $class_control = $array_url[1];
-            $method_control = $array_url[2];
+            $class_control = $array_url[0];
+            $method_control = $array_url[1];
 
             $api = new $class_control;
 
