@@ -36,9 +36,8 @@
 
                         </tbody>
                       </table>
-                    </di>
+                    </div>
                 </div>
-            </div>
             <?php include './views/modules/components/footer.php'; ?>
         </div>
         <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
