@@ -18,7 +18,7 @@
             if ($modulo == 'views/modules/login.php'){
               header("location: " . $data['host']);   //Si ya hay una sesión y se intenta ir al login a qué página redirecciona?
             }else{
-              include_once $modulo;   // Aquí es donde se carga la vista de la página
+              require $modulo;   // Aquí es donde se carga la vista de la página
             }
 
           }else{
@@ -42,10 +42,10 @@
           $errorLogin = 'Usuario y/o contraseña incorrecta.';
           // 'Mostramos' a la página de inicio de sesión
           $data['titulo'] = 'Login';
-          include_once 'views/modules/login.php';
+          require 'views/modules/login.php';
         }
       }else{
-          include_once $modulo;   //No requiere Login así que se carga la vista
+          require $modulo;   //No requiere Login así que se carga la vista
       }
     }
   }
