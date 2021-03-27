@@ -26,13 +26,14 @@
                           <?php
                             foreach ($data['clientes'] as $cliente) {
                               $row = "<tr>\n";
-                              $row .= "\t<td class='text-center'>" . $cliente["IdCliente"] . "</td>\n";
-                              $row .= "\t<td>" . $cliente["Nombre"] . "</td>\n";
-                              $row .= "\t<td>" . $cliente["Telefono"] . "</td>\n";
-                              $row .= "</tr>";
+                              $row .= "\t\t\t\t\t\t\t<td class='text-center'>" . $cliente["IdCliente"] . "</td>\n";
+                              $row .= "\t\t\t\t\t\t\t<td>" . $cliente["Nombre"] . "</td>\n";
+                              $row .= "\t\t\t\t\t\t\t<td>" . $cliente["Telefono"] . "</td>\n";
+                              $row .= "\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t";
                               echo $row;
                             }
                           ?>
+
                         </tbody>
                       </table>
                     </di>
