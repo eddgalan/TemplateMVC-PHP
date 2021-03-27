@@ -3,7 +3,7 @@
     Protected $servername;
     Protected $username;
     Protected $password;
-    Protected $sqldatabase;
+    Protected $dbname;
     Protected $conn;
 
     function __construct() {
@@ -11,6 +11,23 @@
       $this->username = "";     // Colocar aquí el nombre del usuario (De la base de datos)
       $this->password = "";     // Colocar aquí la contraseña del usuario (De la base de datos)
       $this->sqldatabase = "";  // Nombre de la base de datos
+    }
+
+    function connect(){
+      try {
+        $conn = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        write_log("¡Conexión a BD Exitosa!");
+      } catch(PDOException $e) {
+        write_log("Ocurrió un error al conectar a la BD: \nError: " . $e->getMessage());
+        //echo "Connection failed: " . $e->getMessage();
+      }
+    }
+
+    function disconect(){
+      write_log("Desconectado de la BD");
+
     }
   }
 
