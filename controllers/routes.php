@@ -14,7 +14,7 @@
       $routes["clientes/_data_"]="Cliente";
 
       /* ...:: APIs ::... */
-      $routes["API/clientes/get_clientes"]="UsuarioAPI/get_users";
+      $routes["API/clientes/get_clientes"]="ClienteAPI/get_clientes";
 
 
       //Si no está vacía la variable $_GET['url'] la usamos para navegar

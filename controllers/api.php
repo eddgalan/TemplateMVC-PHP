@@ -12,20 +12,13 @@
     }
   }
 
-  class UsuarioAPI extends API{
-    public function get_users(){
-      if($_POST){
-         $this->datos = $_POST['nombre'];
-         $usuario = new Usuario();
-         $usuarios = $usuario-> get_users();
-         if($usuarios){
-           $this -> return_data("Mostrando Usuarios", 200, $usuarios);
-         }else{
-           $this -> return_data("NO se encontraron registros o hubo algún error", 200, $this->datos);
-         }
-      }else{
-        $this->return_data("NO se recibieron datos POST", 200);
-      }
+  class ClienteAPI extends API{
+    public function get_clientes(){
+
+      $cliente = new ClientePDO();
+      $clientes = $cliente->get_clientes();
+      $this -> return_data("Mostrando Clientes", 200, $clientes);
+
     }
   }
 
