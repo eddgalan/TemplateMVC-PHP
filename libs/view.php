@@ -1,10 +1,10 @@
 <?php
-  require 'models/sesion.php';
+  require 'models/session.php';
 
   class View{
     function render($modulo, $data=null, $require_login=false){
       // Creamos una instancia de UsrSession | usuario.php
-      $sesion_usuario = new Session();
+      $sesion_usuario = new UserSession();
       // Generamos una intancia Usuario | usuario.php
       $usuario = new Usuario();
       // Valida si se requiere estar logueado para mostrar la página

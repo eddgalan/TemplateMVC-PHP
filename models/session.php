@@ -1,15 +1,48 @@
 <?php
 
-  Class Session{
+  Class UserSession{
       private $id_user;
       private $user;
       private $user_name;
       private $user_lastname;
       private $groups;
       private $status;
+      private $token;
 
       public function __construct(){
-        session_start();  // Inicia la sesión
+        // Inicia la sesión si no está iniciada
+        if(session_status() == 1){
+          session_start();
+        }
+      }
+
+      public function set_token(){
+        $token = bin2hex(random_bytes(8));
+        $this->token = $token;
+        $_SESSION['token'] = $token;
+        return $this->token;
+      }
+
+      public function get_token(){
+        if(isset($_SESSION['token'])){
+          return $_SESSION['token'];
+        }else{
+          write_log("ERROR | El token no existe");
+        }
+      }
+
+      public function validate_token($token_form){
+        if(isset($_SESSION['token'])){
+          $token = $_SESSION['token'];
+          if ($token == $token_form){
+            return true;
+          }else{
+            return false;
+          }
+        }else{
+          write_log("ERROR | Token does not exist");
+          return false;
+        }
       }
 
       public function set_sesion_actual($datos_usuario){
